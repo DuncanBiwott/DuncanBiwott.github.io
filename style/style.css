@@ -1,82 +1,180 @@
-body{
-    width : 100%;
-  }
-  .main {
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      white 0%,
-      white 50%,
-      rgb(23, 95, 23) 0%,
-      rgb(46, 139, 46) 50%
-    );
-    font-family: 'Roboto', sans-serif;
-    margin-top: 70px;
-  }
-  .first {
-    margin: auto;
-    height: 200px;
+body, h1, h2, h3, h4, h5, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding-top: 19px;
-    margin-top: 15px;
-  }
-  h1 {
-    color: green;
-  }
-  img {
-    width: 150px;
-    margin: auto;
-    height: 150px;
-    background-color: white;
-    text-align: center;
-    border-radius: 100px;
-    border: 2px solid black;
-    margin-top: 70px;
-  }
-  .second {
-    
-    margin: auto;
-    text-align: center;
-    padding-top: 19px;
-    margin-top: 150px;
-    margin-bottom: 25px;
-  }
-  p {
-    width: auto;
-    margin: auto;
     padding: 20px;
-    color: white;
-    opacity: 0.8;
-  }
-  button {
-    width: 150px;
-    margin: auto;
-    border: none;
-    padding: 10px;
-    margin-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the main content */
+.main {
+    text-align: center;
+    padding: 40px;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.profile h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Style the "About Me" section */
+.about {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Style the "My Projects" section */
+.service {
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+
+.service h2 {
+    font-size: 2rem;
+    text-align: center;
     margin-bottom: 30px;
+}
 
-    color: black;
-    border-radius: 20px;
-  }
-  a {
-    width: 150px;
-    margin: auto;
-    border: none;
-    padding: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: black;
-    border-radius: 20px;
-    text-decoration:none
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-  }
-  a:hover{
-    background-color: #ffff;
-    border: 2px solid #ff00;
-    cursor: pointer;
-    transform: scale(0.9);
+.card {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
+.card i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.card h5 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+}
+
+/* Style the "Contact Me" section */
+.contact-me {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-me p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .profile h1 {
+        font-size: 2rem;
+    }
+
+    .profile h3 {
+        font-size: 1.2rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    .service h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        flex-basis: calc(50% - 40px);
+    }
 }
 
   
