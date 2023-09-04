@@ -1,3 +1,4 @@
+/* Reset some default browser styles */
 body, h1, h2, h3, h4, h5, p, ul {
     margin: 0;
     padding: 0;
@@ -26,11 +27,15 @@ nav {
 .logo {
     border-radius: 50%;
     margin-right: 20px;
+    object-fit: cover;
+    height: 80px; /* Adjust the height as needed */
+    width: 80px; /* Adjust the width as needed */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 nav li {
@@ -41,6 +46,15 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hamburger menu icon for small screens */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
 }
 
 /* Style the main content */
@@ -150,10 +164,26 @@ footer {
     nav ul {
         flex-direction: column;
         margin-top: 10px;
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
     }
 
     nav li {
         margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
     }
 
     .profile h1 {
@@ -176,5 +206,6 @@ footer {
         flex-basis: calc(50% - 40px);
     }
 }
+
 
   
