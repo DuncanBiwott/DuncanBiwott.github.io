@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
     <script src="https://kit.fontawesome.com/20441b5a52.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/style/style.css">
-    <title>dan-biwott/dvl</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="main">
-        <div class="first">
-          <h1>Hello, I am Duncan Biwott</h1>
-          <h3> Backend Developer & Flutter Developer</h3>
-           <img src="images/image.jpg" alt="profilepic" />
+        <header>
+            <nav>
+                <img class="logo" src="images/logo.png" height="200" width="200" style="border-radius: 50%;" alt="Profile Picture" />
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+                <a href="#contact" class="btn">Let's Connect</a>
+            </nav>
+        </header>
+        <div class="profile">
+            <h4>Hello, I am</h4>
+            <h1>Duncan <span>Biwott</span></h1>
+            <h3>I am a Django and Flutter Developer</h3>
         </div>
-        <div class="second">
-          <p class="dis"> I am a Spring Boot developer with expertise in Micro-service, Kubernetes, Docker and database development and a new addition of Flutter development skills, I possess a strong analytical mindset and attention to detail. I am capable of designing and implementing scalable, reliable, and efficient software solutions that meet clients' needs. With My experience and knowledge i create well-designed Backend systems that integrate seamlessly with front-end applications. Additionally, My Flutter development skills I create cross-platform mobile applications with a focus on user experience and functionality. With my diverse skill set, am well-equipped to take on complex projects and deliver high-quality software solutions. </p>
-           <a class="btn" href="https://twitter.com/DKiprutoDev">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></a>
-           <a class="btn" href="https://www.linkedin.com/in/duncan-biwott-48a51723a
-           ">LinkeIn<i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    </div>
+    <section id="about" class="about">
+        <div class="main-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5><span>Developer</span></h5>
+                <p>
+                    I am a Backend Developer with knowledge of working with Django,
+                    Django Rest, and Spring Boot. I can develop software applications
+                    with standard code that will help clients achieve their business
+                    goals by delivering good quality products. I can also develop
+                    perfect Android applications with Flutter.
+                </p>
+                <button>Let's talk</button>
+            </div>
+        </div>
+    </section>
+    <div id="projects" class="service">
+        <div class="title">
+            <h2>My Projects</h2>
+        </div>
+        <div class="projects">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>E-commerce Website built with Django</h5>
+                <div class="pra">
+                    <p>Website with complete e-commerce functionalities</p>
+                    <p style="text-align: center">
+                        <a href="#" class="button">Read More</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
+    </div>
+    <div id="contact" class="contact-me">
+        <p>Reach me through my contacts</p>
+        <a href="#" class="button-two">Contact</a>
+    </div>
+    <footer>
+        <p>Duncan Biwott</p>
+        <p>You can also reach me through:</p>
+        <div class="social-media">
+            <a href="https://twitter.com/DKiprutoDev"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/duncan-biwott-48a51723a"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">Copyright by Duncan Biwott</p>
+    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        </div>
-      </div>
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
+
