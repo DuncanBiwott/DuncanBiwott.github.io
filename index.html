@@ -1,94 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
     <script src="https://kit.fontawesome.com/20441b5a52.js" crossorigin="anonymous"></script>
-  
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <h1 class="logo">Your Name</h1>
-                <div class="menu-icon" id="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="menu-list" id="menu-list">
-                    <li><a href="#about">About</a></li>
+    <div class="main">
+        <header>
+            <nav>
+                <img class="logo" src="images/image.jpeg" height="200" width="200" style="border-radius: 50%;" alt="Profile Picture" />
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
+                <a href="#contact" class="btn">Let's Connect</a>
+            </nav>
+        </header>
+        <div class="profile">
+            <h4>Hello, I am</h4>
+            <h1>Duncan <span>Biwott</span></h1>
+            <h3>I am a Django and Flutter Developer</h3>
+        </div>
+    </div>
+    <section id="about" class="about">
+        <div class="main-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5><span>Developer</span></h5>
+                <p>
+                    I am a Backend Developer with knowledge of working with Django,
+                    Django Rest, and Spring Boot. I can develop software applications
+                    with standard code that will help clients achieve their business
+                    goals by delivering good quality products. I can also develop
+                    perfect Android applications with Flutter.
+                </p>
+                <button>Let's talk</button>
             </div>
-        </nav>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a passionate software developer with expertise in various technologies.</p>
         </div>
     </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of the project goes here.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of the project goes here.</p>
-            </div>
-            <!-- Add more project details here -->
+    <div id="projects" class="service">
+        <div class="title">
+            <h2>My Projects</h2>
         </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to get in touch with me through the following channels:</p>
-            <ul>
-                <li>Email: yourname@example.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/yourname/">linkedin.com/in/yourname</a></li>
-                <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
-            </ul>
+        <div class="projects">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>E-commerce Website built with Django</h5>
+                <div class="pra">
+                    <p>Website with complete e-commerce functionalities</p>
+                    <p style="text-align: center">
+                        <a href="#" class="button">Read More</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Add more project cards here -->
         </div>
-    </section>
-
+    </div>
+    <div id="contact" class="contact-me">
+        <p>Reach me through my contacts</p>
+        <a href="#" class="button-two">Contact</a>
+    </div>
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>Duncan Biwott</p>
+        <p>You can also reach me through:</p>
+        <div class="social-media">
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
         </div>
+        <p class="copyright">Copyright by Duncan Biwott</p>
     </footer>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuIcon = document.getElementById("menu-icon");
-            const menuList = document.getElementById("menu-list");
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            menuIcon.addEventListener("click", function () {
-                menuList.classList.toggle("active");
-            });
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-
-                    if (targetElement) {
-                        menuList.classList.remove("active"); // Close the menu on click
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
 </body>
 </html>
-
