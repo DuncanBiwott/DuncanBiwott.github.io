@@ -1,120 +1,180 @@
-/* Reset some default styles */
-* {
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, p, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Set a background color and font for the whole page */
+/* Set a background color */
 body {
+    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
 }
 
-/* Header styling */
+/* Style the header */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    text-align: center;
+    padding: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-size: 24px;
+    border-radius: 50%;
     margin-right: 20px;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.menu-list {
+nav ul {
     list-style: none;
+    display: flex;
 }
 
-.menu-list li {
-    display: inline-block;
+nav li {
     margin-right: 20px;
 }
 
-.menu-list a {
+nav a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
 }
 
-/* About, Projects, and Contact sections styling */
-.section {
-    padding: 80px 0;
+/* Style the main content */
+.main {
     text-align: center;
+    padding: 40px;
 }
 
-.container h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.profile h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
 }
 
-.container p {
-    font-size: 18px;
-    line-height: 1.6;
+.profile h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
     color: #555;
 }
 
-/* Project cards */
-.project {
+/* Style the "About Me" section */
+.about {
     background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: left;
-}
-
-.project h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    padding: 40px;
     text-align: center;
 }
 
-/* Responsive design for smaller screens */
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Style the "My Projects" section */
+.service {
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+
+.service h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.card h5 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+}
+
+/* Style the "Contact Me" section */
+.contact-me {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-me p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-    .menu-list {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #333;
-        padding: 10px;
-        border-radius: 5px;
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
     }
 
-    .menu-list.active {
-        display: block;
+    nav li {
+        margin: 10px 0;
     }
 
-    .menu-list li {
-        display: block;
-        margin-bottom: 10px;
+    .profile h1 {
+        font-size: 2rem;
     }
 
-    .menu-icon {
-        display: block;
+    .profile h3 {
+        font-size: 1.2rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    .service h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        flex-basis: calc(50% - 40px);
     }
 }
 
-
-
-  
